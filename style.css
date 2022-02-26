@@ -14,18 +14,20 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
-  background-color: #222;
+  background-color: #3094e6;
   /* background-color: #60b347; */
 }
 
 /* LAYOUT */
-header {
+.header {
+  width: 100vw !important;
   position: relative;
   height: 35vh;
   border-bottom: 7px solid #eee;
 }
 
 main {
+  width: 100vw;
   height: 65vh;
   color: #eee;
   display: flex;
@@ -33,7 +35,9 @@ main {
   justify-content: space-around;
 }
 
+
 .left {
+  margin-top: 5rem;
   width: 52rem;
   display: flex;
   flex-direction: column;
@@ -41,8 +45,10 @@ main {
 }
 
 .right {
+  margin-top: 3rem;
   width: 52rem;
   font-size: 2rem;
+  text-align: center;
 }
 
 /* ELEMENTS STYLE */
@@ -116,4 +122,40 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 550px) {
+  main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .guess{
+    padding: 2rem;
+    width: 20rem;
+    margin-bottom: 1.5rem;
+  }
+  .message {
+    margin-bottom: 3rem !important;
+    height: 3rem;
+  }
+  .left{
+    width: 50% !important;
+  }
+  .right{
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  .btn {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+  .again {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+  }
 }
